@@ -1,0 +1,135 @@
+details:
+    given_name: I-Kang
+    middle_name:
+    surname: Ding
+
+contact:
+    website: https://ikding.github.io/
+    location: Washington, DC
+    github: ikding
+    linkedin: https://www.linkedin.com/in/ikding
+
+summary:
+    - title: Experienced data scientist & machine learning engineer, passionate about leading and performing highly technical work to drive business value.
+    - title: Years of hands-on experience in the full lifecycle of machine learning models at scale, from business problem definition and refinement, data and feature pipelines, model development, and model deployment and monitoring in production.
+    - title: Fast learner and self-starter, thrives in fast-paced environments. Ability to identify gaps in expertise in projects and programs, and filling the gaps by bringing in the right people or developing the right expertise myself.
+    - title: Domain expertise in financial services & semiconductor mfg.
+
+experience:
+    # Use this entry as an example that can be copied/pasted.
+    - company: KoBold Metals
+      title: Senior Data Scientist
+      location: Berkeley, CA
+      timeperiod: 02/2020-Present
+      # Every "description" field should be written as Markdown.
+      description: |
+        - KoBold Metals is investing in battery materials projects across the globe by combining basic ore-deposit science, big data, and scientific computing with patient private capital.
+
+    - company: Capital One
+      title: Manager, Data Science – Credit Card Fraud Defense
+      location: McLean, VA
+      timeperiod: 12/2017-02/2020
+      description: |
+        - Lead data scientist for developing and deploying machine learning models for payment fraud defense of our entire credit card portfolios. The models score > 700M individual payments totaling $400B (~2% US GDP) from > 40M customers per year, led to fraud savings of > $70M / yr over legacy model, and > $150M / yr overall.
+        - Built reusable, well-tested, end-to-end model development pipelines, including infrastructure provisioning on AWS-EMR, data pull and feature engineering in PySpark and SQL, gradient boosting trees models in H2O, and model monitoring stack in Python, InfluxDB, and Grafana.
+        - Re-wrote feature calculation and unit test codes in production from Java to PySpark, and set up CICD pipelines with pytest and Jenkins. Conducted model validation in prod, allowing on-schedule deployment.
+        - Intimately involved in data scientist recruiting processes for the entire enterprise, serving as one of a handful of interviewers for on-site DS interviews, and providing feedback to shape our recruiting practices.
+
+    - company: Capital One
+      title: Manager, Data Science/PM – Enterprise Customer Intelligence
+      location: Vienna, VA
+      timeperiod: 03/2017-12/2017
+      description: |
+        - Built prototype tools to consume customer digital interaction event streams on Kafka, and explored NLP / sequence models to generate insights to power personalized customer experiences over digital channels.
+        - Interim product manager of in-house clickstream analytics platform that leverages Kafka and Snowplow. Coalesced efforts for monitoring and analysis, and coordinated user transition from legacy platform.
+
+    - company: Capital One Labs
+      title: Principal Data Scientist – Analytical Solutions
+      location: Arlington, VA
+      timeperiod: 04/2015-03/2017
+      description: |
+        - Actively partner with internal lines of business to identify highest leverage problems, and execute on the development of data science based solutions and data products. Also serve as tech evangelist to mentor, train and teach data science techniques and software engineering best practices to cultivate self-sufficient teams.
+        - Analyzed TBs of credit card transactions to identify characteristics and trends of block-level neighborhoods in selected US cities. Developed geospatial data pipelines in Python (fiona, rtree, shapely) and postgres / PostGIS, customer segmentation models in Python, and geospatial data-viz web app in R-shiny / leaflet.
+        - Product owner & team lead for internal platform to automate workflows for business metrics monitoring and dashboards using Python, InfluxDB, and Grafana. Mentored 50+ analysts in 30+ teams, and implemented self-service instruction to scale adoption. (Details available on my [PyCon 2019 talk](https://www.youtube.com/watch?v=JcPwf4Ej12M) and [Capital One blog](https://www.capitalone.com/tech/software-engineering/building-python-user-community-among-capital-ones-data-analysts/))
+
+    - company: Philips Lumileds
+      title: Senior Data Scientist – Technology/Product Characterization
+      location: San Jose, CA
+      timeperiod: 12/2012-04/2015
+      description: |
+        - Developed statistical analysis and data visualization tool in R-shiny to automate data analysis, which reduced routine analysis time by 95% and improved team throughput and enabled faster learning cycles.
+        - Built reusable data pipelines on manufacturing line data to connect multiple processing and testing steps, and developed tree-based models to provide insight on process control capabilities and improve yield.
+
+    - company: Alta Devices
+      title: Senior Device Engineer
+      location: Sunnyvale, CA
+      timeperiod: 06/2011-10/2012
+      description: |
+        - Performed electrical and optical modeling in MATLAB to predict and improve solar cell performance.
+        - Developed and optimized novel, scalable fabrication processes to improve solar cell efficiency, leading to [2 world records](http://www.nrel.gov/ncpv/images/efficiency_chart.jpg) and [3 patents](https://scholar.google.com/citations?user=lCtbDgkAAAAJ).
+
+    - company: Stanford University
+      title: Stanford Graduate Fellow
+      location: Stanford, CA
+      timeperiod: 09/2006-06/2011
+      description: |
+        - Developed advanced characterization techniques and experimentally realized the new light trapping design to improve efficiency of organic-inorganic hybrid solar cells.
+        - Initiated and led collaborations with five research teams across three continents, and authored [13 papers](https://scholar.google.com/citations?user=lCtbDgkAAAAJ) that are highly cited in the field.
+
+education:
+    - degree: Ph.D.
+      school: Stanford University
+      department: Materials Science and Engineering
+      location: Stanford, CA
+      timeperiod: 09/2006 – 06/2011
+
+    - degree: B.Sc.
+      school: National Taiwan University
+      department: Chemistry, with minor in Materials Sci. Eng.
+      location: Taipei, Taiwan
+      timeperiod: 09/2000 – 06/2004
+
+skills:
+    - type: Languages and Tools
+      description: Programming languages and tools that I use in my day-to-day.
+      items:
+        - Python
+        - R
+        - Spark
+        - SQL
+        - git
+        - GitHub
+        - Postgres
+        - PostGIS
+        - Bash
+        - InfluxDB
+        - Grafana
+
+    - type: Packages
+      description: Specific Python packages that I have proficiency with.
+      items:
+        - pandas
+        - numpy
+        - scikit-learn
+        - matplotlib
+        - seaborn
+        - h2o
+        - pytest
+
+    - type: Cloud/DevOps
+      description: Cloud and DevOps-specific tools I have experience of.
+      items:
+        - AWS
+        - Hadoop
+        - Hive
+        - Kafka
+        - Ansible
+        - Docker
+        - CircleCI
+        - Jenkins
+
+    - type: Domain expertise
+      description: Domain expertise gained during my work experiences.
+      items:
+        - Financial services
+        - semiconductor manufacturing

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap v4 Imports -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>I-Kang Ding's Resume</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row" id="name-contact-row">
+        <div class="col-12 text-center" id="name-contact-col">
+          <p></p>
+          <h1>
+            {{ resume['details']['given_name'] }}
+            {% if resume['details']['middle_name'] %}
+            {{ resume['details']['middle_name'] }}
+            {% endif %}
+            {{ resume['details']['surname'] }}
+          </h1>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="{{ resume['contact']['linkedin'] }}" type="button" class="btn btn-light">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              LinkedIn
+            </a>
+            <a href="https://github.com/{{ resume['contact']['github'] }}" type="button" class="btn btn-light">
+              <i class="fa fa-github-square" aria-hidden="true"></i>
+              GitHub
+            </a>
+            <a href="{{ resume['contact']['website'] }}" type="button" class="btn btn-light">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              Website
+            </a>
+            <a type="button" class="btn btn-light">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              {{ resume['contact']['location'] }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <br> <br>
+
+      <div class="row" id="summary-row">
+        <div class="col-12">
+          <h2>
+            <i class="fa fa-list" aria-hidden="true"></i>
+            Summary
+          </h2>
+          <br>
+          <ul>
+            {% for item in resume['summary'] %}
+            <li>{{ item['title'] }} </li>
+            {% endfor %}
+          </u>
+        </div>
+      </div>
+
+      <br>
+      <div class="row" id="experience-row">
+        <div class="col-12">
+          <h2>
+            <i class="fa fa-code" aria-hidden="true"></i>
+            Experience
+          </h2>
+        </div>
+        <div class="container" id="experience-details">
+          {% for experience in resume['experience'] %}
+          <div class="card" id="{{ experience['company']}}-card">
+            <div class="card-header">
+              <h5 class="card-title">{{ experience['title'] }}, {{ experience['company'] }}</h5>
+              <h6 class="card-subtitle text-muted">{{ experience['timeperiod'] }}, {{ experience['location'] }}</h6>
+            </div>
+            <div class="card-body">
+              <p class="card-text">{{ experience['description'] }}</p>
+            </div>
+          </div>
+          <br>
+          {% endfor %}
+        </div>
+      </div>
+
+      <br>
+      <div class="row" id="education-row">
+        <div class="col-12" id="education-title-row">
+          <h2>
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            Education
+          </h2>
+        </div>
+      </div>
+      <div class="card-group">
+        {% for edu in resume["education"] %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ edu["degree"] }}, {{ edu["school"] }}</h5>
+            <small>{{ edu["department"] }}, {{ edu["timeperiod"] }}, {{ edu["location"] }}</small>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <br>
+      <div class="row" id="skills-title-row">
+        <div class="col-12" id="skills-title-col">
+          <h2>
+            <i class="fa fa-wrench" aria-hidden="true"></i>
+            Skills
+          </h2>
+        </div>
+      </div>
+      <div class="card-group">
+        {% for skill in resume['skills'] %}
+        <div class="card">
+          <div class="card-header">
+            <h5>{{ skill["type"] }}</h5>
+            <small class="text-muted">
+              <p>{{ skill["description"] }}</p>
+            </small>
+          </div>
+          <div class="card-body">
+            <p class="card-text"> {{ skill["items"]|join(", ") }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <br>
+      <hr>
+      <div class="row">
+        <div class="col-12 text-center">
+          <small>
+            Made with ❤️ using
+            <a href="https://palletsprojects.com/p/flask/">Flask</a>,
+            <a href="https://palletsprojects.com/p/jinja/">Jinja2</a>,
+            and <a href="https://getbootstrap.com/">Bootstrap 4</a>.
+            Source at <a href="https://github.com/ikding/resume">GitHub</a>
+          </small>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <!-- FontAwesome embed -->
+  <script src="https://use.fontawesome.com/cb9dbe8e41.js"></script>
+
+</html>
